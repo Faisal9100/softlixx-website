@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/e11e4c9e23.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f1f1f1;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+      ::selection {
+        background: rgb(0, 123, 255, 0.3);
+      }
+      .content_nav {
+        padding: 0 50px;
+      }
+      .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 9999 !important;
+        padding: 25px 0;
+        transition: all 0.3s ease;
+      }
+      button {
+        cursor: pointer;
+      }
+      .navbar.sticky {
+        background: #f4f2f2;
+        padding: 10px 0;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+      }
+      .navbar .content_nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .navbar .logo a {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        height: 70px;
+        text-decoration: none;
+      }
+      .navbar .logo a img {
+        height: 50px;
+        display: inline-block;
+      }
+      .navbar .menu-list {
+        display: inline-flex;
+      }
+      .menu-list li {
+        list-style: none;
+        margin: 0px 5;
+      }
+      .menu-list li a {
+        color: rgb(13, 13, 13);
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s;
+        padding: 6px 10px;
+        border-radius: 4px;
+      }
+      .menu-list li a:hover {
+        color: #fcf4f4;
+        background-color: #6a3d94;
+        height: 50px;
+        opacity: 1;
+      }
+      .menu-list li .li-btn {
+        background-color: #6a3d94;
+        padding: 5px;
+        border-radius: 10px;
+        color: #f4f2f2;
+      }
+      .menu-list li .li-btn:hover {
+        background-color: #222;
+      }
+      .banner {
+        background: url("banner.jpg") no-repeat;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .about {
+        padding: 30px 0;
+      }
+      .about .title {
+        font-size: 38px;
+        font-weight: 700;
+      }
+      .about p {
+        padding-top: 20px;
+        text-align: justify;
+      }
+      .icon {
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+      }
+      .menu-list .cancel-btn {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+      }
+      @media (max-width: 1230px) {
+        .content {
+          padding: 0 60px;
+        }
+      }
+      @media (max-width: 1100px) {
+        .content {
+          padding: 0 40px;
+        }
+      }
+      @media (max-width: 900px) {
+        .content {
+          padding: 0 30px;
+        }
+      }
+      @media (max-width: 1020px) {
+        .navbar .menu-list li a {
+          font-size: 15px;
+          display: flex;
+        }
+      }
+      @media (max-width: 868px) {
+        body.disabled {
+          overflow: hidden;
+        }
+        .icon {
+          display: block;
+        }
+        .icon.hide {
+          display: none;
+        }
+        .navbar .menu-list {
+          position: fixed;
+          height: 100vh;
+          width: 100%;
+          max-width: 400px;
+          left: -100%;
+          top: 0px;
+          display: block;
+          text-align: center;
+          background: #222;
+          transition: all 0.3s ease;
+        }
+        .navbar.show .menu-list {
+          left: 0%;
+        }
+        .navbar .menu-list li {
+          margin-top: 23px;
+        }
+        .navbar .menu-list li a {
+          font-size: 23px;
+          margin-left: -100%;
+          transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .navbar.show .menu-list li a {
+          margin-left: 0px;
+        }
+      }
+      @media (max-width: 380px) {
+        .navbar .logo a {
+          font-size: 27px;
+        }
+      }
+
+      .blog_header {
+        padding: 30px;
+        font-size: 40px;
+        background-image: url("Informational blogs.png");
+        text-align: center;
+        color: white;
+      }
+      .blog_header_h2{
+       font-size: 30px;
+      }
+
+      .leftcolumn {
+        float: left;
+        width: 75%;
+      }
+
+      .rightcolumn {
+        float: left;
+        width: 25%;
+        padding-left: 20px;
+      }
+
+      .blog_img_part {
+        background-color: #aaa;
+        background-image: url("digital marketing.png");
+        background-size: cover;
+        width: 100%;
+        min-height: 600px;
+        position: relative;
+        background-position: center;
+        /* padding: 20px; */
+       
+    }
+    @media(max-width:600px){
+        .blog_img_part{
+            background-position: center;
+            min-height: 230px;
+            background-size: cover;
+        }
+      }
+
+      .blog_card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .footer {
+        padding: 20px;
+        position: relative;
+        background: #ddd;
+        text-align: justify;
+        min-height: 240px;
+      }
+      @media(max-width:700px){
+        .footer {
+        background: #ddd;
+        text-align: justify;
+        min-height: 300px;
+      }
+      }
+      @media(max-width:440px){
+        .footer {
+        background: #ddd;
+        text-align: justify;
+        min-height: 400px;
+      }
+      }
+      @media screen and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+      .seo_heading {
+        color: #6a3d94;
+      }
+      .detials_seo {
+        color: #6a3d94;
+      }
+      .blog_card .seo_p_details {
+        line-height: 30px;
+        text-align: justify;
+        font-size: 15px;
+      }
+      .ft-main {
+        width: 100%;
+        display: flex;
+        border: 2px solid white;
+        background: black;
+      }
+      @media (max-width: 800px) {
+        .ft-main {
+          display: block;
+          min-height: 120vh;
+        }
+      }
+      .ft-body1 {
+        width: 45%;
+        transform: translate(25px, 25px);
+      }
+      .ft-body1 .ft-headd {
+        color: white;
+      }
+      .ft-body1 .ft-pp {
+        font-size: 12px;
+        line-height: 25px;
+        color: white;
+      }
+      .ft-body2 {
+        width: 23%;
+        transform: translate(85px, 25px);
+      }
+      @media (max-width: 800px) {
+        .ft-body2 {
+          justify-content: center;
+          align-items: center;
+          margin-left: -55px;
+          padding-top: 10px;
+        }
+      }
+      @media (max-width: 800px) {
+        .ft-body3 {
+          justify-content: center;
+          align-items: center;
+          margin-left: 25px;
+          padding-top: 15px;
+        }
+      }
+
+      .about-icon i {
+        color: aliceblue;
+        display: inline-flex;
+        font-size: 20px;
+        margin: 10px;
+      }
+      .ft-body2 .ft-headd2 {
+        color: white;
+      }
+      .ft-body2 .ft-pp2 {
+        font-size: 12px;
+        line-height: 15px;
+
+        color: white;
+      }
+      .ft-body3 .ft-headd3 {
+        color: white;
+        padding-top: 18px;
+      }
+      .ft-body3 .ft-icon i {
+        color: white;
+        justify-content: space-evenly;
+        padding: 5px;
+      }
+      .ft-body3 .ft-icon .ft-icon-p3 {
+        color: white;
+        display: inline-flex;
+        line-height: 10px;
+        font-size: 12px;
+      }
+      .blog-txt-card {
+        font-family: sans-serif;
+        line-height: 20px;
+        font-size: 15px;
+      }
+      .blog-conclusion {
+        color: #6a3d94;
+        float: left;
+      }
+      .blog-conclusion-txt {
+        font-family: sans-serif;
+        font-size: 15px;
+        float: left;
+        padding: 0;
+        line-height: 25px;
+      }
+      .seo_p_details .strong {
+        color: #6a3d94;
+      }
+      .right_column_h2 {
+        color: #6a3d94;
+        font-family: sans-serif;
+      }
+      .right_column_p {
+        text-align: justify;
+        font-size: 15px;
+        line-height: 20px;
+        font-family: sans-serif;
+      }
+      .popular_post {
+        color: #6a3d94;
+        font-family: sans-serif;
+      }
+      .popular_p {
+        font-family: sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        line-height: 20px;
+      }
+      .popular_post_btn{
+        border-radius: 50px;
+        border: none;
+        color: #6a3d94;
+        height: 25px;
+      }
+      .popular_post_btn:hover{
+       background-color: #6a3d94;
+       color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="content_nav">
+        <div class="logo">
+          <a href="#"><img src="logo.png" /></a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about-main">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#main-career">Career</a></li>
+          <li><a href="index.html#product">Products</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#courses">Courses</a></li>
+          <li><a href="index.html#contact_section">Contact</a></li>
+          <!-- <li><a class="li-btn" href="contact us.html">Sign In</a></li> -->
+        </ul>
+        <div class="icon menu-btn">
+          <i style="background-color: #333" class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <br /><br /><br /><br />
+    <div class="blog_header">
+      <h2 class="blog_header_h2">DIGITAL MARKETING</h2>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="blog_card">
+          <h2 class="seo_heading">
+            Effective Digital Marketing Strategies for Your Business
+          </h2>
+          <h5 style="text-align: left; font-family: sans-serif;margin-top: 20px;">
+            Dec 1, 2023
+          </h5>
+          <div class="blog_img_part" ></div>
+
+          <p class="blog-txt-card">
+            In today's digital age, it's more important than ever for businesses
+            to have a strong online presence. This is where digital marketing
+            comes in. Digital marketing is the use of online channels to promote
+            and sell products or services, and it's an essential part of any
+            business's marketing strategy.
+          </p>
+        </div>
+        <div class="blog_card">
+          <h2 class="detials_seo">
+            Here are a few effective digital marketing strategies for your
+            business:
+          </h2>
+          <p class="seo_p_details">
+            <br /><strong>1. Search Engine Optimization (SEO): </strong> SEO
+            involves optimizing your website and online content to rank higher
+            on search engines like Google. By using targeted keywords and
+            creating high-quality, relevant content, you can increase your
+            visibility on search engines and attract more traffic to your site.
+            <br /><strong>2. Social Media Marketing:</strong> Social media
+            platforms like Facebook, Instagram, and Twitter are great channels
+            for promoting your business and engaging with your audience. By
+            creating and sharing content that is relevant and valuable to your
+            target audience, you can build a loyal following and drive traffic
+            to your website. <br /><strong>3. Email Marketing:</strong> Email
+            marketing is a great way to stay in touch with your customers and
+            send them targeted promotions and offers. By collecting email
+            addresses and sending newsletters or targeted emails, you can keep
+            your business top of mind with your audience and drive sales.
+            <br /><strong>4. Paid Advertising:</strong> Paid advertising, such
+            as Google AdWords or social media ads, can be a highly effective way
+            to reach new customers and drive traffic to your site. By targeting
+            specific demographics and interests, you can ensure that your ads
+            are seen by the right people and generate leads for your business.
+            <br /><strong>5. Content Marketing:</strong> Content marketing
+            involves creating and sharing valuable, relevant content with the
+            goal of attracting and retaining customers. This can include blog
+            posts, articles, videos, and more. By providing valuable information
+            to your audience, you can build trust and credibility with your
+            customers and drive traffic to your website.
+          </p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="blog_card">
+          <h3 class="right_column_h2">About Us</h3>
+          <!-- <div class="blog_img_part" style="height: 100px">Image</div> -->
+          <p class="right_column_p">
+            Softlixx Technologies is a global solution provider specializing in
+            different services. Softlixx serves clients worldwide, through a
+            cross-section of industries, with specific concentration in the
+            Government and Non- Government sectors. Our business philosphy is
+            founded on the importance of relationships and persistent search for
+            greater search for greater accomplishments.
+          </p>
+        </div>
+        <div class="blog_card">
+          <h3 style="color: #6a3d94;">Popular Post</h3>
+          <div class="blog_img_part1">
+            <img
+              src="Graphic Designing 2.png"
+              width="100%"
+              ;
+              height="150px"
+              ;
+            />
+            <h2 class="popular_post">Graphic Designing</h2>
+            <p class="popular_p">
+              Graphic design is the art of creating visual content that
+              communicates a message or idea to a specific audience. It can be
+              used in a variety of mediums, including print, digital, and
+              advertising. 
+            </p>
+            <button class="popular_post_btn">Read More...</button>
+          </div>
+          <br />
+          <div class="blog_img_part2">
+            <img
+              src="product-img.jpg"
+              width="100%"
+              ;
+              height="150px"
+              ;
+            />
+            <h3 class="popular_post">Artificail Intelligence</h3>
+            <p class="popular_p">
+              Artificial intelligence (AI) refers to the ability of machines to
+              mimic human intelligence and perform tasks that would normally
+              require human cognition, such as learning and problem-solving. 
+            </p>
+            <button class="popular_post_btn">Read More...</button>
+          </div>
+
+          <br />
+        </div>
+        <div class="blog_card">
+          <h3 style="color: #6a3d94;">What we Do ?</h3>
+          <p style="font-size: 15px; font-family: sans-serif; line-height: 20px;text-align: justify; ">
+            We have soluton for all your digital needs. SoftLixx helps to
+            businesses by implementing digital solutions that are effective for
+            your businesses.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <h1 class="blog-conclusion">Conclusion</h1>
+      <p class="blog-conclusion-txt">
+        By implementing these digital marketing strategies, you can effectively
+        promote your business online and reach your target audience. It's
+        important to regularly track and analyze the results of your efforts to
+        ensure that you're getting the most out of your digital marketing
+        efforts. With the right digital marketing strategy, you can drive growth
+        for your business and succeed in the digital world.
+      </p>
+    </div>
+    <div class="ft-main">
+      <div class="ft-body1">
+        <h2 class="ft-headd">About Us</h2>
+        <p class="ft-pp">
+          Softlixx Technologies is a global solution provider specializing in
+          different services. Softlixx serves clients worldwide, through a
+          cross-section of industries, with specific concentration in the
+          Government and Non- Government sectors. Our business philosphy is
+          founded on the importance of relationships and persistent search for
+          greater search for greater accomplishments.
+        </p>
+        <div class="about-icon"></div>
+        <div class="about-icon">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-solid fa-envelope"></i>
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="about-icon"></div>
+        <div class="about-icon"></div>
+      </div>
+      <div class="ft-body2">
+        <h2 class="ft-headd2">Services</h2>
+        <p class="ft-pp2">Website Development</p>
+        <p class="ft-pp2">Digital Marketing</p>
+        <p class="ft-pp2">Graphic Designing</p>
+        <p class="ft-pp2">3D & Motion Graphic</p>
+        <p class="ft-pp2">Video Editing</p>
+        <p class="ft-pp2">Software Development</p>
+      </div>
+      <div class="ft-body3">
+        <h2 class="ft-headd3">Contact Information</h2>
+        <div class="ft-icon">
+          <i class="fa-solid fa-location-dot"></i>
+          <p class="ft-icon-p3">FF-1019 Deans Trade Center, Peshawar</p>
+        </div>
+        <div class="ft-icon">
+          <i class="fa-solid fa-mobile-button"></i>
+          <p class="ft-icon-p3">+923159656565</p>
+        </div>
+        <div class="ft-icon">
+          <i class="fa-solid fa-envelope"></i>
+          <p class="ft-icon-p3">info@softlixx.com</p>
+        </div>
+        <div class="ft-icon">
+          <i class="fa-solid fa-globe"></i>
+          <p class="ft-icon-p3">https://www.softlixx.com</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = () => {
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      };
+      cancelBtn.onclick = () => {
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      };
+      this.scrollY > 20
+        ? navbar.classList.add("sticky")
+        : navbar.classList.remove("sticky");
+      window.onscroll = () => {
+        this.scrollY > 20
+          ? navbar.classList.add("sticky")
+          : navbar.classList.remove("sticky");
+      };
+    </script>
+  </body>
+</html>

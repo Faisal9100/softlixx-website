@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/e11e4c9e23.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f1f1f1;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        width: 100%;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+      ::selection {
+        background: rgb(0, 123, 255, 0.3);
+      }
+      .content_nav {
+        padding: 0 30px;
+      }
+      .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 9999 !important;
+        padding: 25px 0;
+        transition: all 0.3s ease;
+      }
+      button {
+        cursor: pointer;
+      }
+      .navbar.sticky {
+        background: #f4f2f2;
+        padding: 10px 0;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+      }
+      .navbar .content_nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .navbar .logo a {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        height: 70px;
+        text-decoration: none;
+      }
+      .navbar .logo a img {
+        height: 50px;
+        display: inline-block;
+      }
+      .navbar .menu-list {
+        display: inline-flex;
+      }
+      .menu-list li {
+        list-style: none;
+        margin: 0px 5;
+      }
+      .menu-list li a {
+        color: rgb(13, 13, 13);
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s;
+        padding: 6px 10px;
+        border-radius: 4px;
+      }
+      .menu-list li a:hover {
+        color: #fcf4f4;
+        background-color: #6a3d94;
+        height: 50px;
+        opacity: 1;
+      }
+      .menu-list li .li-btn {
+        background-color: #6a3d94;
+        padding: 5px;
+        border-radius: 10px;
+        color: #f4f2f2;
+      }
+      .menu-list li .li-btn:hover {
+        background-color: #222;
+      }
+      .banner {
+        background: url("banner.jpg") no-repeat;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .about {
+        padding: 30px 0;
+      }
+      .about .title {
+        font-size: 38px;
+        font-weight: 700;
+      }
+      .about p {
+        padding-top: 20px;
+        text-align: justify;
+      }
+      .icon {
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+      }
+      .menu-list .cancel-btn {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+      }
+      @media (max-width: 1230px) {
+        .content {
+          padding: 0 60px;
+        }
+      }
+      @media (max-width: 1100px) {
+        .content {
+          padding: 0 40px;
+        }
+      }
+      @media (max-width: 900px) {
+        .content {
+          padding: 0 30px;
+        }
+      }
+      @media (max-width: 1020px) {
+        .navbar .menu-list li a {
+          font-size: 15px;
+          display: flex;
+        }
+      }
+      @media (max-width: 868px) {
+        body.disabled {
+          overflow: hidden;
+        }
+        .icon {
+          display: block;
+        }
+        .icon.hide {
+          display: none;
+        }
+        .navbar .menu-list {
+          position: fixed;
+          height: 100vh;
+          width: 100%;
+          max-width: 400px;
+          left: -100%;
+          top: 0px;
+          display: block;
+          text-align: center;
+          background: #222;
+          transition: all 0.3s ease;
+        }
+        .navbar.show .menu-list {
+          left: 0%;
+        }
+        .navbar .menu-list li {
+          margin-top: 23px;
+        }
+        .navbar .menu-list li a {
+          font-size: 23px;
+          margin-left: -100%;
+          transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .navbar.show .menu-list li a {
+          margin-left: 0px;
+        }
+      }
+      @media (max-width: 380px) {
+        .navbar .logo a {
+          font-size: 27px;
+        }
+      }
+
+      .blog_header {
+        padding: 30px;
+        font-size: 40px;
+        background-image: url("Informational blogs.png");
+        text-align: center;
+        color: white;
+      }
+
+      .leftcolumn {
+        float: left;
+        width: 75%;
+      }
+
+      .rightcolumn {
+        float: left;
+        width: 25%;
+        padding-left: 20px;
+      }
+
+      .blog_img_part {
+        background-color: #aaa;
+        background-image: url("seo.jpg");
+        background-size: cover;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .blog_card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+      .seo_heading {
+        color: #6a3d94;
+        text-align: center;
+      }
+      .detials_seo {
+        color: #6a3d94;
+        text-align: center;
+      }
+      .blog_card .seo_p_details {
+        line-height: 30px;
+        font-size: 15px;
+      }
+      .ft-main {
+        width: 100%;
+        display: flex;
+        border: 2px solid white;
+        background: black;
+      }
+      @media (max-width: 800px) {
+        .ft-main {
+          display: block;
+          min-height: 120vh;
+        }
+      }
+      .ft-body1 {
+        width: 45%;
+        transform: translate(25px, 25px);
+      }
+      .ft-body1 .ft-headd {
+        color: white;
+      }
+      .ft-body1 .ft-pp {
+        font-size: 12px;
+        line-height: 25px;
+        color: white;
+      }
+      .ft-body2 {
+        width: 23%;
+        transform: translate(85px, 25px);
+      }
+      @media (max-width: 800px) {
+        .ft-body2 {
+          justify-content: center;
+          align-items: center;
+          margin-left: -55px;
+          padding-top: 10px;
+        }
+      }
+      @media (max-width: 800px) {
+        .ft-body3 {
+          justify-content: center;
+          align-items: center;
+          margin-left: 25px;
+          padding-top: 15px;
+        }
+      }
+
+      .about-icon i {
+        color: aliceblue;
+        display: inline-flex;
+        font-size: 20px;
+        margin: 10px;
+      }
+      .ft-body2 .ft-headd2 {
+        color: white;
+      }
+      .ft-body2 .ft-pp2 {
+        font-size: 12px;
+        line-height: 15px;
+
+        color: white;
+      }
+      .ft-body3 .ft-headd3 {
+        color: white;
+        padding-top: 18px;
+      }
+      .ft-body3 .ft-icon i {
+        color: white;
+        justify-content: space-evenly;
+        padding: 5px;
+      }
+      .ft-body3 .ft-icon .ft-icon-p3 {
+        color: white;
+        display: inline-flex;
+        line-height: 10px;
+        font-size: 12px;
+      }
+      .blog-txt-card {
+        font-family: sans-serif;
+        line-height: 25px;
+        font-size: 15px;
+      }
+      .blog-conclusion {
+        color: #6a3d94;
+      }
+      .blog-conclusion-txt {
+        font-family: sans-serif;
+        font-size: 15px;
+        line-height: 25px;
+      }
+      .seo_p_details .strong {
+        color: #6a3d94;
+      }
+      .right_column_h2 {
+        color: #6a3d94;
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+      .right_column_p {
+        text-align: justify;
+        font-size: 15px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="content_nav">
+        <div class="logo">
+          <a href="#"><img src="logo.png" /></a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about-main">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#main-career">Career</a></li>
+          <li><a href="index.html#product">Products</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#courses">Courses</a></li>
+          <li><a href="index.html#contact_section">Contact</a></li>
+          <!-- <li><a class="li-btn" href="contact us.html">Sign In</a></li> -->
+        </ul>
+        <div class="icon menu-btn">
+          <i style="background-color: #333" class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <br /><br /><br /><br />
+    <div class="blog_header">
+      <h2>IMPORTANCE OF UI/UX DESIGN</h2>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="blog_card">
+          <h2 class="seo_heading">
+            How UI/UX Design is important for Your Business
+          </h2>
+          <h5 style="text-align: center">Dec 1, 2023</h5>
+          <div class="blog_img_part" style="height: 200px"></div>
+
+          <p class="blog-txt-card">
+            UI/UX design refers to the process of designing the user interface
+            (UI) and user experience (UX) of a product or service. UI design
+            focuses on the visual elements of a product, such as the layout,
+            color scheme, and typography, while UX design focuses on the overall
+            experience of using a product, including how easy it is to use and
+            how it meets the needs of the user.
+          </p>
+        </div>
+        <div class="blog_card">
+          <h2 class="detials_seo">
+            Both UI and UX design are important for creating products that are
+            easy to use and provide a positive experience for the user. Here's
+            why UI/UX design is important:
+          </h2>
+          <p class="seo_p_details">
+            <br /><strong>1. Improved User Experience: </strong>A well-designed
+            UI and UX can make a product easier to use and more enjoyable for
+            the user. This can lead to increased satisfaction and loyalty, as
+            well as increased adoption of the product. <br /><strong
+              >2. Increased Efficiency: </strong
+            >A well-designed UI and UX can make it easier for users to
+            accomplish their tasks, leading to increased efficiency and
+            productivity. This can be especially important in industries where
+            time is of the essence, such as healthcare or finance. <br /><strong
+              >3. Competitive Advantage:</strong
+            >A strong UI and UX can set a product apart from its competitors and
+            give it a competitive advantage in the market. A product that is
+            easy to use and provides a positive experience for the user is more
+            likely to be adopted and recommended to others. <br /><strong
+              >4. Increased Sales and Revenue: </strong
+            >A positive user experience can lead to increased sales and revenue
+            for a business. Customers are more likely to purchase and continue
+            using a product that they enjoy using, and they may also recommend
+            it to others.
+          </p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="blog_card">
+          <h2 class="right_column_h2">About Us</h2>
+          <!-- <div class="blog_img_part" style="height: 100px">Image</div> -->
+          <p class="right_column_p">
+            Softlixx Technologies is a global solution provider specializing in
+            different services. Softlixx serves clients worldwide, through a
+            cross-section of industries, with specific concentration in the
+            Government and Non- Government sectors. Our business philosphy is
+            founded on the importance of relationships and persistent search for
+            greater search for greater accomplishments.
+          </p>
+        </div>
+        <div class="blog_card">
+          <h3>Popular Post</h3>
+          <div class="blog_img_part">Image</div>
+          <br />
+          <div class="blog_img_part">Image</div>
+          <br />
+          <div class="blog_img_part">Image</div>
+        </div>
+        <div class="blog_card">
+          <h3></h3>
+          <p style="font-size: 15px; color: #6a3d94; font-family: sans-serif">
+            We have soluton for all your digital needs. SoftLixx helps to
+            businesses by implementing digital solutions that are effective for
+            your businesses.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <h1 class="blog-conclusion">Conclusion</h1>
+      <p class="blog-conclusion-txt">
+        In conclusion, UI/UX design is an essential part of creating a product
+        or service that is easy to use and provides a positive experience for
+        the user. By investing in UI/UX design, businesses can improve the user
+        experience of their products, increase efficiency and productivity, gain
+        a competitive advantage, and drive sales and revenue.
+      </p>
+    </div>
+
+    <div class="ft-main">
+      <div class="ft-body1">
+        <h2 class="ft-headd">About Us</h2>
+        <p class="ft-pp">
+          Softlixx Technologies is a global solution provider specializing in
+          different services. Softlixx serves clients worldwide, through a
+          cross-section of industries, with specific concentration in the
+          Government and Non- Government sectors. Our business philosphy is
+          founded on the importance of relationships and persistent search for
+          greater search for greater accomplishments.
+        </p>
+        <div class="about-icon"></div>
+        <div class="about-icon">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-solid fa-envelope"></i>
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="about-icon"></div>
+        <div class="about-icon"></div>
+      </div>
+      <div class="ft-body2">
+        <h2 class="ft-headd2">Services</h2>
+        <p class="ft-pp2">Website Development</p>
+        <p class="ft-pp2">Digital Marketing</p>
+        <p class="ft-pp2">Graphic Designing</p>
+        <p class="ft-pp2">3D & Motion Graphic</p>
+        <p class="ft-pp2">Video Editing</p>
+        <p class="ft-pp2">Software Development</p>
+      </div>
+      <div class="ft-body3">
+        <h2 class="ft-headd3">Contact Information</h2>
+        <div class="ft-icon">
+          <i class="fa-solid fa-location-dot"></i>
+          <p class="ft-icon-p3">FF-1019 Deans Trade Center, Peshawar</p>
+        </div>
+        <div class="ft-icon">
+          <i class="fa-solid fa-mobile-button"></i>
+          <p class="ft-icon-p3">+923159656565</p>
+        </div>
+        <div class="ft-icon">
+          <i class="fa-solid fa-envelope"></i>
+          <p class="ft-icon-p3">info@softlixx.com</p>
+        </div>
+        <div class="ft-icon">
+          <i class="fa-solid fa-globe"></i>
+          <p class="ft-icon-p3">https://www.softlixx.com</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = () => {
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      };
+      cancelBtn.onclick = () => {
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      };
+      this.scrollY > 20
+        ? navbar.classList.add("sticky")
+        : navbar.classList.remove("sticky");
+      window.onscroll = () => {
+        this.scrollY > 20
+          ? navbar.classList.add("sticky")
+          : navbar.classList.remove("sticky");
+      };
+    </script>
+  </body>
+</html>

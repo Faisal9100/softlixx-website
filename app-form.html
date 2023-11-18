@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e11e4c9e23.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Application Form</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      .contact-main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        overflow: auto;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      .contact {
+        width: 330px;
+        background: white;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.2);
+      }
+      @media (max-width: 550px) {
+        .contact {
+          width: 90%;
+        }
+
+      }
+      .contact form {
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border: none;
+        outline: none;
+      }
+      form label {
+        color: #6a3d94;
+        font-size: 12px;
+        padding-right: 10px;
+      }
+
+      @media (max-width: 306px) {
+        .contact {
+          width: 210px;
+        }
+        form input {
+          width: 140px;
+        }
+      }
+      .contact .txt-form {
+        text-align: center;
+        color: #6a3d94;
+        margin-top: 25px;
+        font-family: sans-serif;
+      }
+      form .btn-form {
+        background-color: #6a3d94;
+        width: 140px;
+        height: 25px;
+        position: relative;
+        left: 120px;
+        color: white;
+        font-size: 12px;
+        border: none;
+        border-radius: 20px;
+      }
+      @media (max-width: 308px) {
+        form .btn-form {
+          width: 110px;
+          margin-left: -36px;
+        }
+      }
+      form .btn-form:hover {
+        background-color: black;
+      }
+      .form-data {
+        display: flex;
+        padding: 10px;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+      .form-data .form-input {
+        padding: 5px 10px;
+        border: none;
+        flex: 1;
+        outline: none;
+        border-radius: 10px;
+        background-color: rgb(242, 242, 242);
+        font-size: 10px;
+      }
+      .form-data .cv_btn_box {
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .form-data .cv-btn {
+        border: none;
+        border-radius: 10px;
+        /* width: 100px; */
+        background-color: #6a3d94;
+        font-size: 8px;
+        color: white;
+        padding: 4px 10px;
+      }
+      .form-data .cv-btn:hover {
+        background-color: black;
+      }
+      .flex-wrap {
+        display: block;
+      }
+      .flex-wrap label {
+        display: inline-block;
+        padding-bottom: 10px !important;
+      }
+      textarea {
+        width: 100% !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact-main">
+      <div class="contact">
+        <h2 class="txt-form">Application Form</h2>
+        <form>
+          <div class="form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="form-input" />
+          </div>
+          <div class="form-data">
+            <label for="fname">Father Name:</label>
+            <input type="text" id="fname" class="form-input" />
+          </div>
+          <div class="form-data">
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" class="form-input" />
+          </div>
+          <div class="form-data">
+            <label for="address">Address:</label>
+            <input type="text" id="address" class="form-input" />
+          </div>
+          <div class="form-data">
+            <label for="job">Apply For:</label>
+            <select id="job" class="form-input">
+              <option value="">Full Stack Development</option>
+              <option value="">Front End Development</option>
+              <option value="">Wordpress</option>
+              <option value="">Back End Development</option>
+              <option value="">Graphic Designing</option>
+            </select>
+          </div>
+          <div class="form-data">
+            <label for="cv">CV:</label>
+            <input type="file" id="cv" class="form-input" />
+            <div class="cv_btn_box">
+              <label class="cv-btn" for="cv">upload CV</label>
+            </div>
+          </div>
+          <div class="form-data flex-wrap">
+            <label for="application">Application</label>
+            <textarea id="application" rows="6" class="form-input"></textarea>
+          </div>
+          <button class="btn-form" type="button" value="submit">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e11e4c9e23.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <title>Contact form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main-contact-form {
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+      }
+      .top-form {
+        width: 100%;
+        height: 7vh;
+        background-color: #6a3d94;
+      }
+      .form-top-txt {
+        width: 230px;
+        height: 45px;
+        left: 40%;
+        padding: 7px;
+        z-index: 999;
+        background-color: white;
+        position: absolute;
+        text-align: center;
+        border-radius: 30px;
+        box-shadow: 10px 0px 10px 10px rgba(0, 0, 0, 0.1);
+      }
+      @media (max-width: 733px) {
+        .form-top-txt {
+          left: 25%;
+          height: 61px;
+          width: 230px;
+        }
+      }
+      @media (max-width: 360px) {
+        .form-top-txt {
+          left: 25%;
+          height: 73px;
+          width: 230px;
+          padding: 15px;
+          font-size: 15px;
+          left: 20%;
+        }
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: center;
+        width: 100;
+        position: relative;
+        row-gap: 10px;
+        column-gap: 10px;
+      }
+      @media (max-width: 1040px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 740px) {
+        .container {
+          grid-template-columns: 1fr;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .card {
+        background: white;
+        width: 350px;
+        background-image: linear-gradient(#6a3d94d2, #6a3d94d2),
+          url("contact\ us\ picture.png");
+        background-size: cover; 
+        height: 90vh;
+        justify-content: space-evenly;
+    
+      }
+      .card .txt-loc {
+        color: white;
+        font-size: 15px;
+        margin: 5px;
+      }
+      .card .txt-loc-p {
+        color: #6a3d94;
+        background-color: white;
+        width: 90%;
+        height: 7vh;
+        padding: 13px;
+        border-radius: 50px;
+        margin-left: 15px;
+        text-align: center;
+      }
+      .card i {
+        color: white;
+        font-size: 20px;
+        margin: 20px;
+      }
+      .card2 {
+        width: 650px;
+      }
+      .card2 .txt-cntt {
+        color: #6a3d94;
+        float: left;
+        padding: 10px;
+    }
+    .card2 .txt-cntt-2 {
+        /* text-align: start; */
+        transform: translate(-245px);
+        padding: 10px;
+      }
+      .cnt-main-1{
+        display: flex;
+        text-align: center;
+      }
+      label[for="name"],[for="Email"]{
+        display: block;
+        margin-top: 20px;
+        transform: translate(50px,-20px);
+      }
+    label[for="subject"],[for="message"]{
+        /* transform: translate(-30px); */
+        margin-left: 40px;
+        float: left;
+    }
+      input[type=text],[type=email] {
+        width: 40%;
+        padding: 12px;
+        border: 1px solid #6a3d94;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 26px;
+        margin-bottom: 16px;
+        /* resize: vertical; */
+      } 
+      input[type=email],textarea {
+        width: 40%;
+        padding: 12px;
+        border: 1px solid #6a3d94;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 26px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }  
+      input[type=text2], textarea {
+        width: 86%;
+        padding: 12px;
+        border: 1px solid #6a3d94;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-left: -15px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }      
+
+      input[type=submit] {
+        background-color: #6a3d94;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+     input[type=submit]:hover {
+        background-color: black;
+    }
+      .card3 {
+        width: 300px;
+        height: 100vh;
+        border: 2px solid black;
+        
+      }
+      .contact-main{
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+        .contact{
+            width: 300px;
+            position: relative;
+            height: 440px;
+            background: white;
+            border: 2px solid white;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 10px 0px 10px 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact form{
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border: none;
+            
+        }
+        form .sign-in{
+           width: 240px;
+           height: 30px;
+           border: none;
+           outline: none;
+           margin: 10px;
+           padding: 10px;
+           border-bottom: 2px solid gray;
+
+        }
+        .contact .txt-form{
+            text-align: center;
+            color: #6a3d94;
+            margin-top: 25px;
+            font-family: sans-serif;
+        }
+        form .btn-form{
+            background-color: #6a3d94;
+            width: 140px;
+            transform: translate(55px,30px);
+            height: 35px;
+            color:white;
+            font-size: 18px;
+            border: none;
+            font-weight: 550;
+            border-radius: 20px;
+        }
+        form .btn-form:hover{
+            background-color: black;
+        }
+        .contact .txt-or{
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+             
+        }
+        .form-icon i{
+            font-size: 25px;
+            padding: 8px;
+            text-align: center;
+            color: #6a3d94;
+            transform: translate(60px,20px);
+            
+        }
+        .form-icon i:hover{
+            background-color: black;
+        }
+        .form-txt-p{
+            text-align: center;
+        }
+        .form-txt-p strong{
+            color: #6a3d94;
+        }
+        .txt-input{
+            font-size: 12px;
+            float: right;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main-contact-form">
+      <div class="top-form">
+        <div class="form-top-txt"><h2>CONTACT US</h2></div>
+      </div>
+      <section class="container">
+        <div class="card">
+          <i class="fa-solid fa-location-dot"></i>
+          <h5 class="txt-loc">Our Location</h5>
+          <p class="txt-loc-p">FF-1019 Deans Trade Center,Peshawar.</p>
+          <i class="fa-solid fa-mobile-button"></i>
+          <h5 class="txt-loc">Phone Number</h5>
+          <p style="width:150px; margin-left:100px;" class="txt-loc-p">+923159656565</p>
+          <i class="fa-solid fa-envelope"></i>
+          <h5 class="txt-loc">Email</h5>
+          <p style="width:150px; margin-left:100px;" class="txt-loc-p">info@softlixx.com</p>
+          <i class="fa-solid fa-globe"></i>
+          <h5 class="txt-loc">Website</h5>
+          <p style="width:250px; margin-left:45px;" class="txt-loc-p">https://www.softlixx.com</p>
+        </div>
+        <div class="card2">
+          <h1 class="txt-cntt">KEEP IN TOUCH</h1>
+          <br /><br />
+          <p class="txt-cntt-2">
+            We Will Answer Your Question As Soon As Possible
+          </p>
+          <form action="/action_page.php">
+          <div class="cnt-main-1">  <label for="name">Name</label>
+            <input type="text" id="fname" name="name" placeholder="Your Name..">
+        
+            <label for="Email">Email</label>
+            <input type="email" id="lname" name="email" placeholder="Your Email..">
+        </div>
+            <label for="subject">Subject</label><br>
+           <input type="text2" placeholder="subject"><br>
+        
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+        <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="card3"><div class="contact-main">
+        <div class="contact">
+            <h2 class="txt-form">Sign Up</h2>
+            <form action="#">
+                <input class="sign-in" type="email" placeholder="Your Email">
+                <input class="sign-in" type="text" placeholder="Your Country">
+                <input class="sign-in" type="password" placeholder="Password">
+                <input class="sign-in" type="password" placeholder="Conform Password">
+                <p class="txt-input">Forgot Password?</p>
+                <button class="btn-form" type="button" value="submit">Sign Up</button>
+            </form><br><br>
+            <p class="txt-or">Or</p>
+            <div class="form-icon">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-globe"></i>
+            </div><br>
+            <p class="form-txt-p">You don't have an Account? <strong>Sign In</strong></p>
+        </div>
+    </div></div>
+    
+        </div>
+    </section>
+    </div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,372 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>Our products</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .courses-main{
+          width: 100%;              
+        }
+        .courses-top{
+            width: 100%;
+        }
+        .txt-courses{
+            width: 100%;
+            opacity: .9 ;
+            text-align: center;
+            justify-content: center;
+        }
+        .txt-courses .courses-h1{
+              color: black;
+              font-size: 40px;
+              margin: 10px;
+            }
+            .txt-courses .courses-p{
+            margin: 10px;
+              color: #6a3d94;
+        }
+        .txt-courses .btn-courses{
+              color: #6a3d94;
+              border-radius:20px;
+              border: none;
+              background-color: aliceblue;
+              width: 95px;
+              font-weight: 600;
+              height: 20px;
+              
+        }
+        .txt-courses .btn-courses:hover{
+            background-color: #0c0c0c;
+            color: white;
+        }
+         .courses-cardd-main{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            margin: 40px;
+          
+
+         }
+         @media(max-width:933px){
+            .courses-cardd-main{
+                display: block;
+            }
+         }
+        
+        .courses-cardd {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          max-width: 350px;
+          background-color:#f5f5f5;
+          margin: auto;
+          text-align: center;
+          font-family: arial;
+          margin-top:40px;
+        border-radius: 20px;
+        }
+       
+        a {
+          text-decoration: none;
+          font-size: 22px;
+          color: black;
+        }
+        
+        button:hover, a:hover {
+          opacity: 0.7;
+        }
+        .courses-cardd-h2{
+         color: #6a3d94;
+         font-size: 24px;
+         margin: 10px;
+        }
+        @media (max-width:270px){
+          .courses-cardd-h2{
+            font-size: 15px;
+          }
+          .courses-cardd-p{
+            font-size: 8px;
+          }
+
+        }
+        .courses-cardd-p{
+            font-size: 11px;
+            padding: 10px;
+            line-height: 20px;
+            font-family: sans-serif;
+        }
+        @media (max-width:200px){
+          .courses-cardd-p{
+            font-size: 9px;
+        }
+      }
+        .course-btn{
+            background-color: #6a3d94;
+            border: none;
+            color: white;
+            width: 100px;
+            height: 29px;
+            border-radius: 50px;
+            margin: 10px;
+            margin-top: -7px;
+        }
+
+          .course-btn:hover {
+           color: white;
+           background-color: #0c0c0c;
+           opacity: 1;
+         }
+         .courses-courses-p{
+            opacity: 999;
+            color: #6a3d94;
+            font-size: 18px;
+         }
+         .latest-job-main{
+           width: 100%;
+           height: 100vh;
+           position: relative;
+           justify-content: center;
+           align-items: center;
+         }   
+         .latest-job-txt{
+          text-align: center;
+          justify-content: space-between;
+         }  
+         .txt-job{
+          color: #6a3d94;
+          margin-top: 50px;
+          position: relative;
+         } 
+         .txt-job::after{
+          content: " ";
+          position: absolute;
+          display: block;
+          width: 14%;
+          left: 43%;
+          height: 2px;
+          background-color: #0c0c0c;
+         }   
+         .job-description{
+          width: 100%;
+          position: relative;
+          display: flex;
+          top: 40px;
+          padding: 10px;
+          justify-content: space-evenly;
+          
+         }
+         @media (max-width:800px){
+          .job-description{
+            display: block;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
+          
+
+         }
+         .line-bottom::after{
+          content: " ";
+          position: absolute;
+          width: 89.3%;
+          left: 5.3%;
+          height: 2px;
+          background-color: rgb(118, 117, 117);
+          font-size: 15px;
+          margin-top: 48px;
+          
+         }
+         .job-first-part .job-title{
+          color: #6a3d94;
+          font-size: 18px;
+         }
+         .job-first-part .txt-locat,.txt-date{
+          font-size: 12px;
+         }
+         .job-second-part{
+          margin-top: 10px;
+          left: 30%;
+         }
+         .job-second-part .job-descrptn{
+          color: #6a3d94;
+          font-size: 13px;
+         }
+         .job-second-part .job-about{
+           font-size: 12px;
+         }
+         .job-btn .jobb-btn1{
+          background-color: #6a3d94;
+          color: white;
+          border: none;
+          width: 120px;
+          padding: 5px;
+          border-radius: 50px;
+          margin-top: 22px;
+          opacity: 1;
+         }
+         .job-btn .jobb-btn1:hover{
+          background-color: #0c0c0c;
+         }
+
+         </style>
+        </head>
+        <body>
+    <div class="courses-main">
+      <div class="courses-top">
+        <div class="txt-courses">
+            <h1 class="courses-h1">Our Courses</h1>
+            <p class="courses-p">"The only impossible journey is the one you never begin"</p>
+    
+        </div>
+      </div>
+    <div class="courses-cardd-main">
+      <div class="courses-cardd">
+        <img src="frontend.jpg"  style="width:100%; height: 200px; border-radius: 30px;padding: 15px;">
+        <h1 class="courses-cardd-h2">Front End Development</h1>
+    
+        <p class="courses-cardd-p">The course will cover topics such as HTML, CSS, and
+            JavaScript, as well as frameworks such as React and
+            Angular. Students will learn how to build responsive layouts,
+            create animations and effects, and integrate with APIs and
+            back-end systems.
+            Throughout the course, students will have the opportunity
+            to work on practical projects that allow them to apply their
+            learning and develop their skills. These projects may
+            include building websites and applications from scratch,
+            as well as customizing and extending existing ones. These
+            projects may include building websites and applications
+            from scratch</p>
+        <button class="course-btn">View Details</button>
+      </div>
+      <div class="courses-cardd">
+        <img src="backend.jpg" alt="John"style="width:100%; height: 190px; border-radius: 30px;padding: 15px;">
+        <h1 class="courses-cardd-h2">Back End Development</h1>
+    
+        <p class="courses-cardd-p">In this course, students will learn the fundamental
+            technologies and techniques used in back-end
+            development, including server-side languages such as
+            Python and Node.js, and databases such as MySQL and
+            MongoDB. They will also learn how to build and deploy
+            server-side applications, and how to design and
+            implement RESTful APIs.
+            Throughout the course, students will work on hands-on
+            projects to apply their knowledge and skills, and will have
+            the opportunity to build and deploy their own back-end
+            applications.</p>
+        <button class="course-btn">View Details</button>
+      </div>
+      <div class="courses-cardd">
+        <img src="graphic.jpg" alt="John" style="width:100%; height: 190px; border-radius: 30px;padding: 15px;">
+        <h1 class="courses-cardd-h2">Graphic Designing</h1>
+    
+        <p class="courses-cardd-p">The course will cover topics such as design theory,
+            typography, color theory, composition, and layout.
+            Students will learn how to use design software such as
+            Adobe Illustrator and Photoshop to create and edit
+            graphics. They will also learn how to effectively
+            communicate their ideas through the design process and
+            present their work to clients or stakeholders.
+            Throughout the course, students will have the opportunity
+            to work on practical projects that allow them to apply their
+            learning and develop their skills. These projects may
+            include designing logos, brochures, posters, and other
+            marketing materials.</p>
+        <button class="course-btn">View Details</button>
+      </div>
+    </div>
+    <div class="latest-job-main">
+      <div class="latest-job-txt">
+        <h1 class="txt-job">Latest Jobs</h1>
+      </div>
+      <div class="job-description">
+        <div class="job-first-part">
+          <h2 class="job-title">Full Stack Developer</h2>
+          <p class="txt-locat">Peshawar , Pakistan</p>
+          <p class="txt-date">Sep 20,2022</p>
+        </div>
+        <div class="job-second-part">
+          <h6 class="job-descrptn">Description</h6>
+          <p class="job-about">Softlixx are hiring “Business Development Executives” in Peshawar. For the markets of US, Afghanistan, Singapore, and <br> South Africans Markets.</p>
+        </div>
+        <div class="job-btn"><button class="jobb-btn1">Apply Now</button></div>
+      </div>
+      <div class="line-bottom"></div>
+      <br>
+      <div class="job-description">
+        <div class="job-first-part">
+          <h2 class="job-title">Front End Developer</h2>
+          <p class="txt-locat">Peshawar , Pakistan</p>
+          <p class="txt-date">Sep 20,2022</p>
+        </div>
+        <div class="job-second-part">
+          <h6 class="job-descrptn">Description</h6>
+          <p class="job-about">Softlixx are hiring “Business Development Executives” in Peshawar. For the markets of US, Afghanistan, Singapore, and <br> South Africans Markets.</p>
+        </div>
+        <div class="job-btn"><button class="jobb-btn1">Apply Now</button></div>
+    </div>
+    <div class="line-bottom"></div>
+    <br>
+    <div class="job-description">
+      <div class="job-first-part">
+        <h2 class="job-title">Back End Developer</h2>
+        <p class="txt-locat">Peshawar , Pakistan</p>
+        <p class="txt-date">Sep 20,2022</p>
+      </div>
+      <div class="job-second-part">
+        <h6 class="job-descrptn">Description</h6>
+        <p class="job-about">Softlixx are hiring “Business Development Executives” in Peshawar. For the markets of US, Afghanistan, Singapore, and <br> South Africans Markets.</p>
+      </div>
+      <div class="job-btn"><button class="jobb-btn1">Apply Now</button></div>
+    </div>
+    <div class="line-bottom"></div>
+    <br>
+    <div class="job-description">
+      <div class="job-first-part">
+        <h2 class="job-title">Laravel Developer</h2>
+        <p class="txt-locat">Peshawar , Pakistan</p>
+        <p class="txt-date">Sep 20,2022</p>
+      </div>
+      <div class="job-second-part">
+        <h6 class="job-descrptn">Description</h6>
+        <p class="job-about">Softlixx are hiring “Business Development Executives” in Peshawar. For the markets of US, Afghanistan, Singapore, and <br> South Africans Markets.</p>
+      </div>
+      <div class="job-btn"><button class="jobb-btn1">Apply Now</button></div>
+    </div>
+    <div class="line-bottom"></div>
+    <br>
+    <div class="job-description">
+      <div class="job-first-part">
+        <h2 class="job-title">Graphic Designer</h2>
+        <p class="txt-locat">Peshawar , Pakistan</p>
+        <p class="txt-date">Sep 20,2022</p>
+      </div>
+      <div class="job-second-part">
+        <h6 class="job-descrptn">Description</h6>
+        <p class="job-about">Softlixx are hiring “Business Development Executives” in Peshawar. For the markets of US, Afghanistan, Singapore, and <br> South Africans Markets.</p>
+      </div>
+      <div class="job-btn"><button class="jobb-btn1">Apply Now</button></div>
+    </div>
+    <div class="line-bottom"></div><br>
+    <div class="job-description">
+      <div class="job-first-part">
+        <h2 class="job-title">Product Designer</h2>
+        <p class="txt-locat">Peshawar , Pakistan</p>
+        <p class="txt-date">Sep 20,2022</p>
+      </div>
+      <div class="job-second-part">
+        <h6 class="job-descrptn">Description</h6>
+        <p class="job-about">Softlixx are hiring “Business Development Executives” in Peshawar. For the markets of US, Afghanistan, Singapore, and <br> South Africans Markets.</p>
+      </div>
+      <div class="job-btn"><button class="jobb-btn1">Apply Now</button></div>
+    </div>
+    <div class="line-bottom"></div><br>
+    </div>
+  </body>
+  </html>

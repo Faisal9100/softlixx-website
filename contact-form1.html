@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://kit.fontawesome.com/e11e4c9e23.js"
+    crossorigin="anonymous"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
+    <title>Document</title>
+    <style>
+          * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main-contact-form {
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        text-align: center;
+        position: relative;
+      }
+      .top-form {
+        width: 100%;
+        height: 6vh;
+        background-color: #6a3d94;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+      }
+      .form-top-txt {
+        width: 230px;
+        height: 45px;
+        background-color: white;
+        padding: 0 35px;
+        border-radius: 80px;
+        background-color: white;
+        height: calc(100% + 10px);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 999;
+        top: -5px;
+      }
+      .coontainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        /* height: 95vh; */
+        position: relative;
+      }
+     
+      .cnt_card {
+        background: white;
+        width: 300px;
+        background-image: linear-gradient(#6a3d94d2, #6a3d94d2),
+          url("contact\ us\ picture.png");
+        background-size: cover; 
+        /* height: 90vh; */
+        justify-content: space-evenly;
+        
+    
+      }
+      .cnt_card  .txt-loc {
+        color: white;
+        font-size: 15px;
+        margin: 5px;
+      }
+      .cnt_card  .txt-loc-p {
+        color: #6a3d94;
+        background-color: white;
+        font-size: 14px;
+        width: 86%;
+        height: 6vh;
+        padding: 10px;
+        z-index: 999;
+        border-radius: 50px;
+        margin-left: 25px;
+        font-weight: 600;
+        text-align: center;
+      }
+      .cnt_card  i {
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+      } 
+      .cnt_card2 {
+        width: 650px;
+      }
+      .cnt_card2 .txt-cntt {
+        color: #6a3d94;
+        /* float: left; */
+        font-size: 30px;
+        padding: 10px;
+    }
+    p.txt{
+      position: relative;
+    }
+    .txt-cntt-2 {
+        
+        position: relative;
+        
+      }
+      .cnt-main-1{
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+      label[for="name"],[for="Email"]{
+        display: block;
+        margin-top: 20px;
+        transform: translate(50px,-20px);
+      }
+    label[for="subject"],[for="message"]{
+        margin-left: 40px;
+        float: left;
+    }
+      input[type=text],[type=email] {
+        width: 37%;
+        padding: 12px;
+        border: 1px solid #6a3d94;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 26px;
+        margin-bottom: 16px;
+        outline: #6a3d94;
+        
+      } 
+      input[type=email],textarea {
+        outline: #6a3d94;
+        width: 37%;
+        padding: 12px;
+        border: 1px solid #6a3d94;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 26px;
+        margin-bottom: 16px;
+      
+      }  
+      .cnt-main-2  input[type=text2], textarea {
+        width: 80%;
+        outline: #6a3d94;
+        padding: 12px;
+        border: 1px solid #6a3d94;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-left: -60px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }      
+
+      input[type=submit] {
+        background-color: #6a3d94;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        width: 140px;
+        border-radius: 250px;
+        cursor: pointer;
+    }
+
+     input[type=submit]:hover {
+        background-color: black;
+    }
+    .cnt-main-2{
+      width: 100%;
+    }
+    @media(max-width:700px){
+      .cnt-main-2{
+      width: 100%;
+      margin-left: 23px;
+    }
+    }
+    </style>
+</head>
+<body>
+    <div class="top-section">
+        <div class="main-contact-form">
+            <div class="top-form">
+              <div class="form-top-txt"><h2>CONTACT US</h2></div>
+            </div>
+            <section class="coontainer">
+                <div class="cnt_card"><br><br>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <h5 class="txt-loc">Our Location</h5>
+                  <p class="txt-loc-p">FF-1019 Deans Trade Center,Peshawar.</p><br>
+                  <i class="fa-solid fa-mobile-button"></i>
+                  <h5 class="txt-loc">Phone Number</h5>
+                  <p style="width:150px; margin-left:75px; font-weight: 600;" class="txt-loc-p">+923159656565</p><br>
+                  <i class="fa-solid fa-envelope"></i>
+                  <h5 class="txt-loc">Email</h5>
+                  <p style="width:150px; margin-left:75px;font-weight: 600;" class="txt-loc-p">info@softlixx.com</p><br>
+                  <i class="fa-solid fa-globe"></i>
+                  <h5 class="txt-loc">Website</h5>
+                  <p style="width:250px; margin-left:25px;font-weight: 600;" class="txt-loc-p">https://www.softlixx.com</p>
+                </div>
+                <div class=".cnt_card2"><br>
+                    <h1 class="txt-cntt">KEEP IN TOUCH</h1>
+                    <br />
+                    <div class="p-txt">
+                      <p class="txt-cntt-2">
+                        We Will Answer Your Question As Soon As Possible
+                      </p><br>
+                    </div>
+                    <form action="/action_page.php">
+                    <div class="cnt-main-1">  <label for="name">Name</label>
+                      <input type="text" id="fname" name="name" placeholder="Your Name..">
+                  
+                      <label for="Email">Email</label>
+                      <input type="email" id="lname" name="email" placeholder="Your Email..">
+                  </div>
+                     <div class="cnt-main-2">
+                      <label for="subject">Subject</label><br>
+                      <input type="text2" placeholder="subject"><br>
+                   
+                       <label for="message">Message</label><br>
+                       <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                     </div>
+                  <br>
+                      <input type="submit" value="Submit">
+                  </form>
+              </div>
+        
+            
+                </div>
+            </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

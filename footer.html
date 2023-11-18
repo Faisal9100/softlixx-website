@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e11e4c9e23.js" crossorigin="anonymous"></script>
+    <title>Footer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .ft-main{
+            width: 100%;
+            min-height: 26vh;
+            display: flex;
+            justify-content: space-evenly;
+            border: 2px solid white;
+            background: black;
+        }
+        @media(max-width:800px){
+            .ft-main{
+                display: block;
+                /* height:150vh; */
+                
+            }
+        }
+        .ft-body1{
+            width: 45%;
+            /* text-align: center; */
+            /* height: 30vh; */
+            transform: translate(25px, 25px);
+            /* border: 2px solid white; */
+        }
+        .ft-body1 .ft-headd{
+            color: white;
+            /* float: left; */
+        }
+        .ft-body1 .ft-pp{
+            font-size: 12px;
+            line-height: 25px;
+            color: white;
+        }
+        .ft-body2{
+            width: 23%;
+            /* height: 30vh; */
+            transform: translate(85px, 25px);
+            /* border: 2px solid white; */
+        }
+        @media(max-width:800px){
+            .ft-body2{
+                transform: translate(24px, 165px);
+                height: auto;
+                width: 100;
+            } 
+
+        }
+        .ft-body3{
+            width: 23%;
+            /* height: 30vh; */
+            transform: translate(25px, 25px);
+            /* border: 2px solid white; */
+        }
+        @media(max-width:800px){
+            .ft-body3{
+                transform: translate(24px, 185px);
+                height: 30vh;
+            } 
+
+        }
+        .about-icon i{
+            color: aliceblue;
+            display: inline-flex;
+            font-size: 20px;
+            margin: 10px;
+        }
+        .ft-body2 .ft-headd2{
+            color: white;
+            /* text-align: center; */
+        }
+        .ft-body2 .ft-pp2{
+            font-size: 12px;
+            line-height: 25px;
+            /* text-align: center; */
+            color: white;
+        }
+        .ft-body3 .ft-headd3{
+            color: white;
+        }
+        .ft-body3 .ft-icon i{
+         color: white;
+         justify-content: space-evenly;
+         padding: 10px;
+        }
+        .ft-body3 .ft-icon  .ft-icon-p3{
+            color: white;
+            display: inline-flex;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ft-main">
+        <div class="ft-body1">
+            <h2 class="ft-headd">About Us</h2>
+            <p class="ft-pp">Softlixx Technologies is a global solution provider specializing in different services. Softlixx serves clients
+                worldwide, through a cross-section of industries, with specific concentration in the Government and Non-
+                Government sectors. Our business philosphy is founded on the importance of relationships and persistent             
+                search for greater search for greater accomplishments.</p>
+                <div class="about-icon">
+                </div>
+                <div class="about-icon">
+                      <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>                  
+                    <i class="fa-solid fa-envelope"></i>                   
+                    <i class="fa-solid fa-globe"></i>                  
+                  </div>
+                  <div class="about-icon">
+                  </div>
+                  <div class="about-icon">
+                  </div>
+            </div>
+        <div class="ft-body2">
+            <h2 class="ft-headd2">Services</h2>
+            <p class="ft-pp2">Website Development</p>
+            <p class="ft-pp2">Digital Marketing</p>
+            <p class="ft-pp2">Graphic Designing</p>
+            <p class="ft-pp2">3D & Motion Graphic</p>
+            <p class="ft-pp2">Video Editing</p>
+            <p class="ft-pp2">Software Development</p>
+        </div>
+        <div class="ft-body3">
+            <h2 class="ft-headd3">Contact Information</h2>
+            <div class="ft-icon"><i class="fa-solid fa-location-dot"></i><p class="ft-icon-p3">FF-1019 Deans Trade Center, Peshawar</p></div>
+            <div class="ft-icon"><i class="fa-solid fa-mobile-button"></i><p class="ft-icon-p3">+923159656565</p></div>
+            <div class="ft-icon"><i class="fa-solid fa-envelope"></i><p class="ft-icon-p3">info@softlixx.com</p></div>
+            <div class="ft-icon"><i class="fa-solid fa-globe"></i><p class="ft-icon-p3">https://www.softlixx.com</p></div>
+        </div>
+    </div>
+</body>
+</html>

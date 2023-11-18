@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>testimonial</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .testimonail-main {
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+      }
+      .testimonial-top-txt {
+        color: #6a3d94;
+      }
+
+      .line {
+        border: 2px solid #6a3d94;
+        width: 40px;
+        transform: translate(620px);
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 20px;
+
+        justify-content: center;
+        align-items: center;
+      }
+      @media (max-width: 1000px) {
+        .line {
+          transform: translate(230px);
+        }
+      }
+
+      .card-img {
+        border-radius: 100px;
+        width: 70px;
+        height: 70px;
+        align-self: center;
+        transform: translate(0px, 50px);
+      }
+      .card .head-part {
+        width: 190px;
+        height: 290px;
+        overflow: hidden;
+        position: absolute;
+        clip-path: circle(37% at 0 0);
+        border-radius: 3px;
+        background-color: #6a3d94;
+      }
+      .card .txt-name {
+        text-align: center;
+        color: #6a3d94;
+        position: relative;
+        transform: translate(0px, 50px);
+      }
+      .card .txt-role {
+        text-align: center;
+        color: black;
+        position: relative;
+        transform: translate(0px, 50px);
+      }
+      .icon i {
+        font-size: 13px;
+        color: rgb(243, 115, 11);
+        transform: translate(0px, 50px);
+      }
+      .head-part i {
+        color: white;
+        position: relative;
+        font-size: 25px;
+        right: 60px;
+        bottom: -25px;
+      }
+      .card .txt-h1-head {
+        color: #6a3d94;
+        text-align: center;
+        position: relative;
+        font-size: 20px;
+        transform: translate(0px, 60px);
+      }
+      .card .txt-p {
+        position: relative;
+        transform: translate(0px, 70px);
+        padding: 20px;
+        top: -24px;
+      }
+      .containere {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 100px;
+        row-gap: 30px;
+        column-gap: 30px;
+      }
+      @media (max-width: 1040px) {
+        .containere {
+          grid-template-columns: repeat(2, 1fr);
+          margin-left: 50px;
+          grid-gap: -20px;
+        }
+      }
+      @media (max-width: 740px) {
+        .containere {
+          grid-template-columns: 1fr;
+          justify-content: center;
+          align-items: center;
+          margin-left: 160px;
+          /* transform: translate(100px,0px); */
+        }
+      }
+      @media (max-width: 540px) {
+        .containere {
+          grid-template-columns: 1fr;
+          justify-content: center;
+          align-items: center;
+          margin-left: 60px;
+          /* transform: translate(100px,0px); */
+        }
+      }
+      @media (max-width: 420px) {
+        .containere {
+          grid-template-columns: 1fr;
+          justify-content: center;
+          align-items: center;
+          margin-left: 5px;
+          /* transform: translate(100px,0px); */
+        }
+      }
+      .top-container {
+        width: 20px;
+      }
+      .card-top {
+        color: #6a3d94;
+        width: 207px;
+        height: 0px;
+        border-radius: 10px;
+        border: 29px solid #6a3d94;
+        justify-content: center;
+        clip-path: polygon(20% 0%, 80% 0, 80% 12%, 20% 12%);
+      }
+      .card {
+        background: white;
+        width: 350px;
+        border: 2px solid #6a3d94;
+        height: 370px;
+        text-align: left;
+        line-height: 20px;
+        text-align: center;
+        margin: 3px 0px 0px 5px;
+        border-radius: 10px;
+        box-shadow: 10px 0px 10px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .card p {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+
+      .card .shape {
+        clip-path: inset(15% 0 64% 95%);
+        background-color: black;
+        width: 200px;
+        margin-left: 146.6px;
+        position: relative;
+        height: 200px;
+        margin-top: 20px;
+      }
+      .card .shape2 {
+        clip-path: inset(15% 0 64% 95%);
+        background-color: #6a3d94;
+        width: 200px;
+        margin-left: 146.6px;
+        margin-top: -159px;
+        position: relative;
+        height: 200px;
+      }
+      .card .shape4 {
+        clip-path: inset(15% 0 64% 95%);
+        background-color: #6a3d94;
+        width: 200px;
+        margin-top: -160px;
+        margin-left: -190px;
+        position: relative;
+        height: 200px;
+      }
+      .card .shap3 {
+        clip-path: inset(15% 0 64% 95%);
+        background-color: rgb(10, 9, 10);
+        width: 200px;
+        margin-top: -50px;
+        margin-left: -190px;
+        height: 200px;
+      }
+      .card-inside {
+        margin-top: -451px;
+        border-radius: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testimonail-main">
+      <div class="testimonial-top">
+        <h2 class="testimonial-top-txt">Testimonial</h2>
+        <h1 class="testimonial-below">What Our customers Say</h1>
+        <!-- <div class="line"></div> -->
+      </div>
+      <section class="containere">
+        <div class="card">
+          <div class="shape"></div>
+          <div class="shape2"></div>
+          <div class="shap3"></div>
+          <div class="shape4"></div>
+          <div class="card-inside">
+            <div class="head-part"><i class="fa-solid fa-quote-left"></i></div>
+            <img class="card-img" src="01.jpg" alt="" />
+            <h4 class="txt-name">Peter Tradewell</h4>
+            <h4 class="txt-role">Ceo</h4>
+            <div class="icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h1 class="txt-h1-head">Amazing customer Service</h1>
+            <p class="txt-p">
+              "It s just been a joy working with the softlixx team. I really
+              feel they are part of our own team and they supported something
+              into your business that works really well, because they are so
+              versatile, no matter what business you have o how many social
+              media platsforms you use."
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="shape"></div>
+          <div class="shape2"></div>
+          <div class="shap3"></div>
+          <div class="shape4"></div>
+          <div class="card-inside">
+            <div class="head-part"><i class="fa-solid fa-quote-left"></i></div>
+            <img class="card-img" src="01.jpg" alt="" />
+            <h4 class="txt-name">Peter Tradewell</h4>
+            <h4 class="txt-role">Ceo</h4>
+            <div class="icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h1 class="txt-h1-head">Amazing customer Service</h1>
+            <p class="txt-p">
+              "It s just been a joy working with the softlixx team. I really
+              feel they are part of our own team and they supported something
+              into your business that works really well, because they are so
+              versatile, no matter what business you have o how many social
+              media platsforms you use."
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="shape"></div>
+          <div class="shape2"></div>
+          <div class="shap3"></div>
+          <div class="shape4"></div>
+          <div class="card-inside">
+            <div class="head-part"><i class="fa-solid fa-quote-left"></i></div>
+            <img class="card-img" src="01.jpg" alt="" />
+            <h4 class="txt-name">Peter Tradewell</h4>
+            <h4 class="txt-role">Ceo</h4>
+            <div class="icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h1 class="txt-h1-head">Amazing customer Service</h1>
+            <p class="txt-p">
+              "It s just been a joy working with the softlixx team. I really
+              feel they are part of our own team and they supported something
+              into your business that works really well, because they are so
+              versatile, no matter what business you have o how many social
+              media platsforms you use."
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/e11e4c9e23.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

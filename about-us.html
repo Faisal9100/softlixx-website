@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e11e4c9e23.js" crossorigin="anonymous"></script>
+    <title>About Us</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .about-main{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .about-top{
+            width: 100%;
+            height: 30vh;
+            border: 2px solid gray;
+            background-image: url("about.jpg");
+            background-size: cover;
+            position:relative;
+        }
+        .about-heading{
+            text-align: center;
+            color:white;
+            width: 100%;
+            height: 30vh;    
+            font-family: sans-serif;
+             bottom: 0;
+             background: #6a3d94 ;
+             background: rgba(rgba(95, 0, 255, 0.5)); /* Black background with 0.5 opacity */
+             color: #f1f1f1;
+             width: 100%;
+             padding: 40px;  
+             opacity: .8;
+         }
+         .about-middle{
+            width: 60%;
+            height: 52vh;
+            position: absolute;
+            transform: translate(240px,-80px);
+            background-color: white;
+            box-shadow:  5px 3px 18px #c3c2c2;
+            /* border: 2px solid black; */
+         }
+         @media (max-width:1050px) {
+            .about-middle{
+               transform: translate(165px,-60px);
+               width: 70%;
+               height: 65vh;
+            }
+            .main-about-icon{
+                /* transform: translate(-3px); */
+                /* font-size: 10px; */
+           }
+           .main-about-icon .about-icon{
+            margin: 20px;
+           }
+           .h2-first{
+
+               transform: translate(-100px,20px);
+           }
+         }
+         @media (max-width:800px) {
+            .about-middle{
+               transform: translate(75px,-50px);
+               width: 70%;
+               height: 65vh;
+            }
+            .middle-txt{
+                font-size: 15px;
+                color: #6a3d94;
+                padding: 5px;
+            }
+            .main-about-icon{
+                transform: translate(-3px);
+                font-size: 10px;
+           }
+           .main-about-icon .about-icon{
+            margin: 0px;
+           }
+         }
+         /* @media (max-width:700px){
+            .middle-txt{
+                 font-size: 10px;
+            }
+         } */
+
+         .about-middle .middle-txt{
+            text-align: center;
+            padding: 20px;
+            color:#6a3d94;
+            font-family: sans-serif;
+            font-size: 28px;
+         }
+        .middle-p{
+            text-align: center;
+            font-size: 14px;
+            padding: 15px;
+            
+         }
+         .main-about-icon{
+            display: flex;
+            width: 110%;
+            margin-left: -40px;
+            margin-top: -30px;
+            position: absolute;
+         }
+         .about-icon {
+             display: flex; 
+             width: 100px;
+             height: 120px;
+             /* border: 2px solid #6a3d94; */
+             /* position: fixed; */
+             justify-content: center; 
+             /* text-align: center; */
+             align-items: center;
+             text-align: center;
+             margin: 20px;
+             transform: translate(65px,-15px);
+             font-size: 30px;
+             /* justify-content: space-evenly; */
+            }
+            .about-icon i{
+             /* display: flex;  */
+             /* margin-left: 30px; */
+             width: 80%;
+             justify-content: center; 
+             text-align: center;
+             align-items: center;
+             position: relative;
+
+             /* margin: 50px; */
+             font-size: 25px;
+             margin-top: -50px;
+             /* justify-content: space-evenly;    */
+        }
+        .about-icon .txt-icon11{
+            font-size: 12px;
+            position: absolute;
+            margin-top: 20px;
+            font-weight: 600;
+            font-family: sans-serif;
+            
+        }
+        .about-last{
+            transform: translate(50px,220px);
+            font-size: 20px;
+            color: black;
+        }
+        .about-footer-main{
+            display: flex;
+            transform: translate(180px,315px);
+            font-family: sans-serif;
+        }
+        .h2-first{
+            height: 70px;
+            /* border:2px solid #6a3d94; */
+            width: 220px;
+            padding: 10px;
+            margin: 2px;
+            text-align: center;
+        }
+        .h2-first .h{
+          color: #6a3d94;
+        }
+        .h2-first .txt-p1{
+            font-family: sans-serif;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="about-main">
+        <div class="about-top">
+            <!-- <img width="100%;height:30vh;" src="about.jpg" alt=""> -->
+            <h1 class="about-heading">ABOUT SOFTLIXX</h1>
+            <div class="about-middle">
+                <h1 class="middle-txt">Who We Are</h1>
+                <p class="middle-p">Softlixx Technologies is a global solution provider specializing in different services. Softlixx serves clients
+                    worldwide, through a cross-section of industries, with specific concentration in the Government and Non-
+                    Government sectors. Our business philosphy is founded on the importance of relationships and persistent
+                    search for greater search for greater accomplishments</p>
+                    <h1 class="middle-txt">Why SOFTLIXX</h1><br>
+                  <div class="main-about-icon">
+
+                      <div class="about-icon">
+                          <i class="fa-solid fa-medal"></i>
+                          <p class="txt-icon11">BEST QUALITY</p>
+                        </div>
+                        <div class="about-icon">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <p class="txt-icon11">TIME DELIVERING</p>
+                        </div>
+                        <div class="about-icon">
+                            <i class="fa-solid fa-headset"></i>
+                            <p class="txt-icon11">DEDICATED STAFF</p>
+                        </div>
+                        <div class="about-icon">
+                            <i class="fa-solid fa-people-group"></i>
+                            <p class="txt-icon11">PROFESSIONAL TEAM</p>
+                        </div>
+                        <div class="about-icon">
+                            <i class="fa-solid fa-check-to-slot"> </i>
+                            <p class="txt-icon11">RELIABLE</p></div>
+                        </div>
+                    </div>
+                    </div>
+                <div class="about-footer-main">
+                    <div class="h2-first">
+                        <h2 class="h">200+</h2>
+                        <p class="txt-p1" >Completed Projects</p>
+                    </div>
+                    <div class="h2-first">
+                        <h2 class="h">150+</h2>
+                        <p class="txt-p1">Happy Clients</p>
+                    </div>
+                    <div class="h2-first">
+                        <h2 class="h">5+</h2>
+                        <p class="txt-p1">Years in Operation</p>
+                    </div>
+                    <div class="h2-first">
+                        <h2 class="h">50+</h2>
+                        <p class="txt-p1">Professionals</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

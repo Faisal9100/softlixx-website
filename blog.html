@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/e11e4c9e23.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Blog</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .blog-main {
+        width: 100%;
+        height: 100vh;
+        border: 2px solid black;
+      }
+      .blog-top {
+        width: 100%;
+        height: 30vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url("Informational\ blogs.png");
+      }
+      .blog-top-container .blog-top-txt {
+        color: aliceblue;
+        text-align: center;
+        padding-top: 60px;
+        font-size: 37px;
+      }
+      .blog-ccard-main {
+        text-align: center;
+        justify-content: center;
+        margin-top: 40px;
+        display: flex;
+        margin: 70px;
+      }
+      @media (max-width: 1035px) {
+        .blog-ccard-main {
+          display: block;
+          max-width: 500px;
+          justify-content: center;
+          align-items: center;
+        
+        }
+      }
+
+      .blog-cccard {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 320px;
+        min-height: 380px;
+        margin: auto;
+        text-align: center;
+        font-family: sans-serif;
+        border-radius: 20px;
+        /* position: relative; */
+      }
+      @media (max-width: 850px) {
+        .blog-cccard {
+          margin-top: 30px;
+        }
+        .blog-cccard .blog-ccard-h3 {
+          font-size: 10px;
+        }
+      }
+      .blog-cccard .blog-ccard-h3 {
+        color: #6a3d94;
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 18px;
+      }
+      @media (max-width: 850px) {
+        .blog-cccard {
+          margin-top: 30px;
+        }
+        .blog-cccard .blog-ccard-h3 {
+          font-size: 10px;
+        }
+      }
+      .blog-cccard .blog-ccard-p {
+        color: black;
+        font-size: 11px;
+        text-align: center;
+        line-height: 17px;
+        font-family: sans-serif;
+      }
+      @media (max-width: 850px) {
+        .blog-cccard {
+          margin-top: 30px;
+        }
+        .blog-cccard .blog-ccard-p {
+          font-size: 9px;
+        }
+      }
+      .blog-cccard .blog-cccard-top {
+        width: 300px;
+        height: 30px;
+        border-radius: 100px;
+        justify-content: center;
+        clip-path: ellipse(29% 42% at 48% 0%);
+        background-color: #6a3d94;
+        border: 5px solid #6a3d94;
+      }
+      .blog-cccard .blog-btn {
+        color: #6a3d94;
+        border: none;
+        background-color: white;
+        float: left;
+        margin: 10px;
+      }
+      .blog-cccard .blog-btn:hover {
+        background-color: #6a3d94;
+        color: aliceblue;
+        border-radius: 20px;
+        width: 100px;
+      }
+      .blog-cccard .blog-btn i {
+        margin: 2px;
+      }
+      .blog-cccard .blog-ccard-p2 {
+        color: gray;
+        font-size: 13px;
+        position: absolute;
+        bottom: 10px;
+        border-top: 1px solid gray;
+        padding-top: 4px;
+        padding-left: 8px;
+        text-align: left;
+
+        width: 100%;
+      }
+      .blog-cccard .p1 {
+        color: #6a3d94;
+        float: left;
+        line-height: 30px;
+        display: block;
+      }
+    
+     
+    </style>
+  </head>
+  <body>
+    <div class="blog main">
+      <div class="blog-top">
+        <div class="blog-top-container">
+          <h1 class="blog-top-txt">Our Digital Transformation Blog</h1>
+        </div>
+      </div>
+      <div class="blog-middle-content">
+        <div class="blog-ccard-main">
+          <div class="blog-cccard">
+            <img
+              src="blog-card.jfif"
+              style="
+                width: 100%;
+                height: 10rem;
+                border-radius: 20px 20px 0px 0px;
+              "
+            />
+            <h3 class="blog-ccard-h3">
+              The Cost of Hiring Senior Software Developers in the Pakistan in
+              2022
+            </h3>
+            <br />
+            <p class="blog-ccard-p">
+              Senior Software development can be a costly endeavor in the
+              Pakistan. The cost for a company to hire a senior software
+              developer is pretty high. Apart from the salaries, a company has
+              to pay bonuses and others pert to the......
+            </p>
+            <button class="blog-btn">
+              Read More<i class="fa-solid fa-caret-down"></i>
+            </button>
+            <p class="blog-ccard-p2">October 10 2022</p>
+          </div>
+          <div class="blog-cccard">
+            <img
+              src="blog-card-2.jfif"
+              style="
+                width: 100%;
+                height: 10rem;
+                border-radius: 20px 20px 0px 0px;
+              "
+            />
+            <h3 class="blog-ccard-h3">
+              Three Things to Keep in Mind when Setting Up a Software
+              Development Team
+            </h3>
+            <br />
+            <p class="blog-ccard-p">
+              Software Development projects have become increasingly common as
+              technology continues to grow and develop. Today, all businesses
+              need software developers to ensure the succes of their
+              opertaions......
+            </p>
+            <button class="blog-btn">
+              Read More<i class="fa-solid fa-caret-down"></i>
+            </button>
+            <p class="blog-ccard-p2">October 10 2022</p>
+          </div>
+          <div class="blog-cccard">
+            <img
+              src="blog-card-2.jfif"
+              style="
+                width: 100%;
+                height: 10rem;
+                border-radius: 20px 20px 0px 0px;
+              "
+            />
+            <h3 class="blog-ccard-h3">
+              Three Things to Keep in Mind when Setting Up a Software
+              Development Team
+            </h3>
+            <br />
+            <p class="blog-ccard-p">
+              Software Development projects have become increasingly common as
+              technology continues to grow and develop. Today, all businesses
+              need software developers to ensure the succes of their
+              opertaions......
+            </p>
+            <button class="blog-btn">
+              Read More<i class="fa-solid fa-caret-down"></i>
+            </button>
+            <p class="blog-ccard-p2">October 10 2022</p>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

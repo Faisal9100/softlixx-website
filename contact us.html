@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e11e4c9e23.js" crossorigin="anonymous"></script>
+    <title>Contact Us</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .contact-main{
+            background-image: url("contact.jpg");
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+        .contact{
+            width: 300px;
+            position: relative;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            background: white;
+            transform: translate(-50%,-50%);
+            border: 2px solid white;
+            /* transform: translate(550px,200px); */
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+        .contact form{
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border: none;
+            
+        }
+        form input{
+           width: 240px;
+           height: 35px;
+           border: none;
+           outline: none;
+           margin: 10px;
+           padding: 10px;
+           border-bottom: 2px solid gray;
+
+        }
+        .contact .txt-form{
+            text-align: center;
+            color: #6a3d94;
+            margin-top: 25px;
+            font-family: sans-serif;
+        }
+        form .btn-form{
+            background-color: #6a3d94;
+            width: 140px;
+            transform: translate(55px,30px);
+            height: 35px;
+            color: aliceblue;
+            font-size: 18px;
+            border: none;
+            font-weight: 600;
+            border-radius: 20px;
+        }
+        form .btn-form:hover{
+            background-color: black;
+        }
+        .contact .txt-or{
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            /* font-family: sans-serif; */
+        }
+        .form-icon i{
+            font-size: 25px;
+            padding: 8px;
+            text-align: center;
+            color: #6a3d94;
+            transform: translate(60px,20px);
+            
+        }
+        .form-icon i:hover{
+            background-color: black;
+        }
+        .form-txt-p{
+            text-align: center;
+        }
+        .form-txt-p strong{
+            color: #6a3d94;
+        }
+        .txt-input{
+            font-size: 12px;
+            float: right;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="contact-main">
+        <div class="contact">
+            <h2 class="txt-form">Sign In</h2>
+            <form action="#">
+                <input type="text" placeholder="Your Email">
+                <input type="password" placeholder="Password">
+                <p class="txt-input">Forgot Password?</p>
+                <button class="btn-form" type="button" value="submit">Sign In</button>
+            </form><br><br>
+            <p class="txt-or">Or</p>
+            <div class="form-icon">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-globe"></i>
+            </div><br>
+            <p class="form-txt-p">You don't have an Account? <strong>Sign Up</strong></p>
+        </div>
+    </div>
+</body>
+</html>
